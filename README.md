@@ -53,7 +53,11 @@ Next, go back to Edit Configurations as before. Click the green plus and select 
 
 ![](pics/setup_remote.png)
 
-Now, once you have built your script and have it enabled in Bitwig Studio as described above, select your Debug configuration in IDEA. Click the bug symbol to start debugging. IDEA will now connect to Bitwig Studio and react to breakpoints. You will see the following message in the Debug window:
+Now, once you have built your script and have it enabled in Bitwig Studio as described above, select your Debug configuration in IDEA. Click the bug symbol to enable the debugger.
+ 
+ ![](pics/debug_start.png)
+
+IDEA will now connect to Bitwig Studio and react to breakpoints. You will see the following message in the Debug window at the bottom.
 
 ![](pics/debug_connected.png)
 
