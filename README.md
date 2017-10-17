@@ -9,10 +9,10 @@ This will open the following dialog box:
 
 ![](pics/new_project.png)
 
-Select a suitable location, configure the Name, Vendor, Author, and MIDI Ins / Outs. Click OK to generate the default boilerplate project. This will create a folder in the specified Location, with the name specified in Name. I will end up with the folder C:\Users\Oscar\midimix.
+Select a suitable location, configure the Name, Vendor, Author, and MIDI Ins / Outs. Click OK to generate the default boilerplate project. This will create a directory in the specified Location, with the name specified in Name. I will end up with the directory C:\Users\Oscar\midimix.
 
 
-In IntelliJ, navigate to the folder you have generated and open it as a project. This can be done by opening the pom.xml file.
+In IntelliJ, navigate to the directory you have generated and open it as a project. This can be done by opening the pom.xml file.
 
 ![](pics/open_project.png)
 
@@ -24,18 +24,19 @@ This will open the following dialog box. Click the green plus sign in the top le
 
 ![](pics/setup_compile.png)
 
-This step is optional, but incredibly convenient. You can set up your build configuration to build your .bwextension into the Extensions folder. 
+This step is optional, but incredibly convenient. You can set up your build configuration to build your .bwextension into the Extensions directory. 
 
-**NOTE**: This means building your script will automatically overwrite the .bwextension file in your Extensions folder. Take care to name your destinationFile in such a way that you do not lose something of value to you. 
+**NOTE**: This means building your script will automatically overwrite the .bwextension file in your Extensions directory. Take care to name your destinationFile in such a way that you do not lose something of value to you. 
 
-Navigate to the pom.xml file in the root directory of the project. Change the <destinationFile> value to the path of your Bitwig Extensions directory. Make sure to escape backslashes, at least on Windows.
+Navigate to the pom.xml file in the root directory of the project. Change the <destinationFile> value to include the path of your Bitwig Extensions directory. Make sure to escape backslashes, at least on Windows. Bottom part of the image shows the default setting, top part shows how I've configured mine to build in the Extensions directory. **Do not remove the filename**.
+
 ![](pics/build_in_bw_folder.png)
 
 In order to build the extension, select the correct Build Configuration and click the green arrow next to it. If the build succeeds you will see the message "BUILD SUCCESS" at the bottom.
 
 ![](pics/build_success.png)
 
-In Bitwig Studio, I have connected my script to my MIDI Mix controller. I only do this **once**. Since I have configured Maven to build into the extensions folder, every time I build the project in IntelliJ it will automatically reload in Bitwig.
+In Bitwig Studio, I have connected my script to my MIDI Mix controller. I only do this **once**. Since I have configured Maven to build into the extensions directory, every time I build the project in IntelliJ it will automatically reload in Bitwig.
 
 ![](pics/controller_settings.png)
 ![](pics/script_console_init.png)
